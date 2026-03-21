@@ -35,7 +35,6 @@ const T = {
     nombre_placeholder:"Tu nombre completo",
     telefono_placeholder:"Tu teléfono (WhatsApp)",
     turno_confirmado:"¡Turno confirmado!",
-    turno_sub:"Te enviaremos los detalles por Telegram",
     nuevo_turno:"Reservar otro turno",
     disponible:"Disponible",
     ocupado:"Ocupado",
@@ -66,7 +65,6 @@ const T = {
     nombre_placeholder:"Your full name",
     telefono_placeholder:"Your phone (WhatsApp)",
     turno_confirmado:"Appointment confirmed!",
-    turno_sub:"We'll send you the details via Telegram",
     nuevo_turno:"Book another appointment",
     disponible:"Available",
     ocupado:"Busy",
@@ -97,7 +95,6 @@ const T = {
     nombre_placeholder:"Ваше полное имя",
     telefono_placeholder:"Ваш телефон (WhatsApp)",
     turno_confirmado:"Запись подтверждена!",
-    turno_sub:"Мы отправим детали в Telegram",
     nuevo_turno:"Записаться снова",
     disponible:"Свободно",
     ocupado:"Занято",
@@ -317,8 +314,7 @@ export default function App() {
       <div style={S.successBox}>
         <div style={S.successEmoji}>✨</div>
         <div style={S.successTitle}>{t.turno_confirmado}</div>
-        <div style={S.successSub}>{t.turno_sub}</div>
-        {/* Резюме */}
+                {/* Резюме */}
         <div style={{border:`1px solid ${BORDER}`, padding:"16px", marginBottom:20, textAlign:"left"}}>
           {[
             [t.servicio, servicio?.nombre[lang]],
