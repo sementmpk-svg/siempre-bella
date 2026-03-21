@@ -7,8 +7,8 @@ const CONFIG = {
   nombre:       "Siempre Bella",
   ciudad:       "Buenos Aires",
   subtitulo:    "Salón de belleza · Turnos online",
-  telegramBot:  "PEGAR_TOKEN_BOT_AQUI",
-  telegramChat: "PEGAR_CHAT_ID_AQUI",
+  telegramBot:  "8730232969:AAFFafm8jeLPMmLfXObNaYlxqPzFrY0W3vM",
+  telegramChat: "835919977",
 };
 
 // ── Paleta ──
