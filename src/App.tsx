@@ -17,7 +17,6 @@ const WHITE  = "#FFFFFF";
 const GRAY   = "#F4F4F4";
 const BORDER = "#E8E8E8";
 const MUTED  = "#999999";
-const ACCENT = "#1A1A1A";
 const FONTS  = `@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');`;
 
 // ── Traducciones ──
@@ -263,7 +262,7 @@ export default function App() {
     summaryVal: { fontFamily:"'Playfair Display',serif", fontSize:14, color:BLACK },
     error: { fontSize:11, color:"#c0392b", marginBottom:8, letterSpacing:0.5 },
     calGrid: { display:"grid", gridTemplateColumns:"repeat(7,1fr)", gap:4, marginBottom:16 },
-    dayBtn: (active:boolean, isToday:boolean) => ({ padding:"8px 4px", textAlign:"center" as const, border:`1px solid ${active?BLACK:BORDER}`, background:active?BLACK:WHITE, color:active?WHITE:BLACK, fontSize:11, cursor:"pointer", fontFamily:"inherit", fontWeight:active?500:300 }),
+    dayBtn: (active:boolean) => ({ padding:"8px 4px", textAlign:"center" as const, border:`1px solid ${active?BLACK:BORDER}`, background:active?BLACK:WHITE, color:active?WHITE:BLACK, fontSize:11, cursor:"pointer", fontFamily:"inherit", fontWeight:active?500:300 }),
     dayLabel: { fontSize:8, color:MUTED, textAlign:"center" as const, letterSpacing:1 },
     slotGrid: { display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:6 },
     slot: (libre:boolean, active:boolean) => ({ padding:"10px 6px", textAlign:"center" as const, border:`1px solid ${active?BLACK:libre?BORDER:"#F0F0F0"}`, background:active?BLACK:libre?WHITE:GRAY, color:active?WHITE:libre?BLACK:MUTED, fontSize:12, cursor:libre?"pointer":"not-allowed", fontFamily:"inherit" }),
@@ -434,7 +433,7 @@ export default function App() {
               const active = d===fecha;
               return(
                 <button key={d} onClick={()=>{setFecha(d);setHora("");}}
-                  style={S.dayBtn(active, false)}>
+                  style={S.dayBtn(active)}>
                   {dayNum}
                 </button>
               );
